@@ -10,5 +10,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "addTorrent(fileUrl:config:onAdd:):Transmission.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "url.string">
+            </PersistentString>
+            <PersistentString
+               value = "url.password">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

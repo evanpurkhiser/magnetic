@@ -1,36 +1,23 @@
-//
-//  AppDelegate.swift
-//  Magnetic
-//
-//  Created by Evan Purkhiser on 1/19/18.
-//  Copyright © 2018 Evan Purkhiser. All rights reserved.
-//
-
 import UIKit
-
-
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        print("handling other thing")
-
         return true
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let controller = self.window?.rootViewController as? ViewController
         
         var config = TransmissionConfig()
-        config.host = "192.168.1.100"
-        config.port = 9091
-        
-        addTorrent(fileUrl: url, config: config)
-        
+        config.host = UserDefaults.standard.value(forKey: "hostname") as? String
+
+        addTorrent(fileUrl: url, config: config, onAdd: controller!.torrentWasAdded)
+
         return true
     }
 
