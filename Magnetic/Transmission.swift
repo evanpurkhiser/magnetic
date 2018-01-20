@@ -5,7 +5,6 @@ let TOKEN_HEADER = "x-transmission-session-id"
 var lastSessionToken: String?
 
 struct TorrentAdd: Codable {
-    // TODO: does it need to have let?
     let filename:URL
 }
 
