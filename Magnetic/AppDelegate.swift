@@ -9,10 +9,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         return true
     }
-    
+
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         let controller = self.window?.rootViewController as? ViewController
-        
+
         var config = TransmissionConfig()
         config.host = UserDefaults.standard.value(forKey: "hostname") as? String
 

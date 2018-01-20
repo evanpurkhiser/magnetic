@@ -40,14 +40,14 @@ public func addTorrent(fileUrl: URL, config: TransmissionConfig, onAdd: @escapin
     req.httpBody = try? JSONEncoder().encode(setTorrentBody)
     req.setValue("application/json", forHTTPHeaderField: "Content-Type")
     req.setValue(lastSessionToken, forHTTPHeaderField: TOKEN_HEADER)
-    
+
     let task = URLSession.shared.dataTask(with: req) { (data, resp, error) in
         if error != nil {
             return onAdd(TransmissionResponse.configError)
         }
-        
+
         let httpResp = resp as? HTTPURLResponse
-        
+
         switch httpResp?.statusCode {
         // If our session token is invalid transmission will tell us,
         // we'll store the new one and make the request again
@@ -68,6 +68,6 @@ public func addTorrent(fileUrl: URL, config: TransmissionConfig, onAdd: @escapin
             return onAdd(TransmissionResponse.failed)
         }
     }
-    
+
     task.resume()
 }
