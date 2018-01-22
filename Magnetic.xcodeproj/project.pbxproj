@@ -13,6 +13,7 @@
 		20C63DA220131B4E0009F64D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C63DA120131B4E0009F64D /* Assets.xcassets */; };
 		20C63DA520131B4E0009F64D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C63DA320131B4E0009F64D /* LaunchScreen.storyboard */; };
 		20C63DAD201335EB0009F64D /* Transmission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C63DAC201335EB0009F64D /* Transmission.swift */; };
+		5A4D1CBB26546944093712A3 /* Pods_Magnetic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCE7756AE3499475585D95F6 /* Pods_Magnetic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		20C63DA420131B4E0009F64D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20C63DA620131B4E0009F64D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20C63DAC201335EB0009F64D /* Transmission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transmission.swift; sourceTree = "<group>"; };
+		8C91093A9DFE3C7B8C6879C1 /* Pods-Magnetic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magnetic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Magnetic/Pods-Magnetic.debug.xcconfig"; sourceTree = "<group>"; };
+		B379D646211A1EA3EE3770B1 /* Pods-Magnetic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Magnetic.release.xcconfig"; path = "Pods/Target Support Files/Pods-Magnetic/Pods-Magnetic.release.xcconfig"; sourceTree = "<group>"; };
+		CCE7756AE3499475585D95F6 /* Pods_Magnetic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Magnetic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A4D1CBB26546944093712A3 /* Pods_Magnetic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C0086CDAEFA0335C5B30A02 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C91093A9DFE3C7B8C6879C1 /* Pods-Magnetic.debug.xcconfig */,
+				B379D646211A1EA3EE3770B1 /* Pods-Magnetic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		20C63D8E20131B4E0009F64D = {
 			isa = PBXGroup;
 			children = (
 				20C63D9920131B4E0009F64D /* Magnetic */,
 				20C63D9820131B4E0009F64D /* Products */,
+				1C0086CDAEFA0335C5B30A02 /* Pods */,
+				DFF6BB4CF6C1ED0B65522E0E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,12 +75,20 @@
 				20C63D9A20131B4E0009F64D /* AppDelegate.swift */,
 				20C63D9C20131B4E0009F64D /* ViewController.swift */,
 				20C63D9E20131B4E0009F64D /* Main.storyboard */,
-				20C63DA120131B4E0009F64D /* Assets.xcassets */,
 				20C63DA320131B4E0009F64D /* LaunchScreen.storyboard */,
 				20C63DA620131B4E0009F64D /* Info.plist */,
 				20C63DAC201335EB0009F64D /* Transmission.swift */,
+				20C63DA120131B4E0009F64D /* Assets.xcassets */,
 			);
 			path = Magnetic;
+			sourceTree = "<group>";
+		};
+		DFF6BB4CF6C1ED0B65522E0E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCE7756AE3499475585D95F6 /* Pods_Magnetic.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20C63DA920131B4E0009F64D /* Build configuration list for PBXNativeTarget "Magnetic" */;
 			buildPhases = (
+				96CDFD552EB86118CCE5A91D /* [CP] Check Pods Manifest.lock */,
 				20C63D9320131B4E0009F64D /* Sources */,
 				20C63D9420131B4E0009F64D /* Frameworks */,
 				20C63D9520131B4E0009F64D /* Resources */,
+				E008D67269DA0DCD521C2032 /* [CP] Embed Pods Frameworks */,
+				D310D047549236FAA1D68011 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +126,7 @@
 				TargetAttributes = {
 					20C63D9620131B4E0009F64D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -133,6 +161,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		96CDFD552EB86118CCE5A91D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Magnetic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D310D047549236FAA1D68011 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magnetic/Pods-Magnetic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E008D67269DA0DCD521C2032 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Magnetic/Pods-Magnetic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/1PasswordExtension/OnePasswordExtension.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OnePasswordExtension.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Magnetic/Pods-Magnetic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20C63D9320131B4E0009F64D /* Sources */ = {
@@ -276,23 +358,28 @@
 		};
 		20C63DAA20131B4E0009F64D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C91093A9DFE3C7B8C6879C1 /* Pods-Magnetic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NFTH6B9GKT;
 				INFOPLIST_FILE = Magnetic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.evanpurkhiser.Magnetic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		20C63DAB20131B4E0009F64D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B379D646211A1EA3EE3770B1 /* Pods-Magnetic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NFTH6B9GKT;
 				INFOPLIST_FILE = Magnetic/Info.plist;
@@ -300,7 +387,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.evanpurkhiser.Magnetic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

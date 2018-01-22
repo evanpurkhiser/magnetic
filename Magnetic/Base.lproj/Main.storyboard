@@ -6,9 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Helvetica.ttc">
+            <string>Helvetica-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -18,54 +24,139 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Transmission Hostname" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-Rc-Ex5">
-                                <rect key="frame" x="16" y="391" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
-                                <connections>
-                                    <action selector="updateHostname" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wM9-kv-1Ai"/>
-                                    <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7R9-3x-I0g"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="nVd-CS-fEx"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-WH-aLd">
-                                <rect key="frame" x="195" y="429" width="164" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
-                                <connections>
-                                    <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bYd-Oj-i5M"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="gF6-PX-ivY"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nMu-MM-cmE">
-                                <rect key="frame" x="16" y="429" width="171" height="30"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
-                                <connections>
-                                    <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Y5r-Ge-UFT"/>
-                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="1Xh-5b-nrZ"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="magnetic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKp-l4-9cJ">
-                                <rect key="frame" x="0.0" y="188" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="40"/>
-                                <nil key="textColor"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Gdc-MH-LDy">
+                                <rect key="frame" x="157" y="119" width="61" height="61"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="magnetic" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKp-l4-9cJ">
+                                <rect key="frame" x="134.33333333333334" y="200" width="105.66666666666666" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="24"/>
+                                <color key="textColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPT-gU-wAQ">
+                                <rect key="frame" x="60" y="269.66666666666669" width="254" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="254" id="avT-mn-UH0"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Magnetic forwards magnet links and .torrent files to a transmission server of your choosing.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="12" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YxB-cd-YWS" userLabel="Settings">
+                                <rect key="frame" x="60" y="573" width="254" height="155"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-WH-aLd" customClass="SettingsField" customModule="Magnetic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="96" width="254" height="36"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.70310361610000005" green="0.71006503809999999" blue="0.71006503809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.37254901960784315" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
+                                        <connections>
+                                            <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="bYd-Oj-i5M"/>
+                                            <outlet property="delegate" destination="8bC-Xf-vdC" id="gF6-PX-ivY"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nMu-MM-cmE" customClass="SettingsField" customModule="Magnetic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="254" height="36"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.70310361610000005" green="0.71006503809999999" blue="0.71006503809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.3411764705882353" green="0.37254901960784315" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="username"/>
+                                        <connections>
+                                            <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Y5r-Ge-UFT"/>
+                                            <outlet property="delegate" destination="8bC-Xf-vdC" id="K7c-Sj-QEL"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="Transmission Hostname" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DJG-Rc-Ex5" customClass="SettingsField" customModule="Magnetic" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="36"/>
+                                        <color key="backgroundColor" red="0.93333333333333335" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.70310361610000005" green="0.71006503809999999" blue="0.71006503809999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="36" id="RIT-9v-bi1"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.3411764705882353" green="0.37254901960784315" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="url"/>
+                                        <connections>
+                                            <action selector="updateHostname" destination="BYZ-38-t0r" eventType="editingDidEnd" id="wM9-kv-1Ai"/>
+                                            <action selector="updateSettings:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="7R9-3x-I0g"/>
+                                            <outlet property="delegate" destination="8bC-Xf-vdC" id="nVd-CS-fEx"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RlZ-b7-EVv">
+                                        <rect key="frame" x="0.0" y="144" width="254" height="11"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Service must run over HTTPS port 443">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.59607843137254901" green="0.61568627450980395" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" metaFont="miniSystem"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDP-pu-DCa">
+                                        <rect key="frame" x="218" y="96" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="fDP-pu-DCa" secondAttribute="height" multiplier="1:1" id="l2b-lS-4S4"/>
+                                        </constraints>
+                                        <state key="normal" image="onepassword-button"/>
+                                        <connections>
+                                            <action selector="passwordAutofill:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="nTu-D8-jFc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fDP-pu-DCa" firstAttribute="trailing" secondItem="bEv-WH-aLd" secondAttribute="trailing" id="0tV-lX-rob"/>
+                                    <constraint firstItem="fDP-pu-DCa" firstAttribute="bottom" secondItem="bEv-WH-aLd" secondAttribute="bottom" id="29k-SV-jy1"/>
+                                    <constraint firstAttribute="trailing" secondItem="DJG-Rc-Ex5" secondAttribute="trailing" id="3wo-CX-ddp"/>
+                                    <constraint firstItem="bEv-WH-aLd" firstAttribute="height" secondItem="DJG-Rc-Ex5" secondAttribute="height" id="7f3-oc-Skb"/>
+                                    <constraint firstAttribute="bottom" secondItem="RlZ-b7-EVv" secondAttribute="bottom" id="Bvs-V7-mYu"/>
+                                    <constraint firstAttribute="trailing" secondItem="bEv-WH-aLd" secondAttribute="trailing" id="C74-2R-3wZ"/>
+                                    <constraint firstItem="DJG-Rc-Ex5" firstAttribute="leading" secondItem="YxB-cd-YWS" secondAttribute="leading" id="G4g-de-Vki"/>
+                                    <constraint firstItem="fDP-pu-DCa" firstAttribute="top" secondItem="bEv-WH-aLd" secondAttribute="top" id="KHw-3K-NoV"/>
+                                    <constraint firstItem="bEv-WH-aLd" firstAttribute="leading" secondItem="YxB-cd-YWS" secondAttribute="leading" id="PbO-3p-GYE"/>
+                                    <constraint firstAttribute="trailing" secondItem="RlZ-b7-EVv" secondAttribute="trailing" id="TK0-gG-Hf2"/>
+                                    <constraint firstItem="nMu-MM-cmE" firstAttribute="leading" secondItem="YxB-cd-YWS" secondAttribute="leading" id="VSN-Eh-9Ld"/>
+                                    <constraint firstItem="bEv-WH-aLd" firstAttribute="top" secondItem="nMu-MM-cmE" secondAttribute="bottom" constant="12" id="VyE-qH-Ihq"/>
+                                    <constraint firstItem="nMu-MM-cmE" firstAttribute="top" secondItem="DJG-Rc-Ex5" secondAttribute="bottom" constant="12" id="eLQ-f4-Jqo"/>
+                                    <constraint firstAttribute="trailing" secondItem="nMu-MM-cmE" secondAttribute="trailing" id="f4W-e9-Zpq"/>
+                                    <constraint firstItem="RlZ-b7-EVv" firstAttribute="leading" secondItem="YxB-cd-YWS" secondAttribute="leading" id="f4d-OU-Tv5"/>
+                                    <constraint firstItem="DJG-Rc-Ex5" firstAttribute="top" secondItem="YxB-cd-YWS" secondAttribute="top" id="u8n-1i-aAA"/>
+                                    <constraint firstItem="RlZ-b7-EVv" firstAttribute="top" secondItem="bEv-WH-aLd" secondAttribute="bottom" constant="12" id="wDl-gA-aHQ"/>
+                                    <constraint firstItem="nMu-MM-cmE" firstAttribute="height" secondItem="DJG-Rc-Ex5" secondAttribute="height" id="wN8-bP-ZGr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UKp-l4-9cJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6xw-h0-aBX"/>
+                            <constraint firstItem="SPT-gU-wAQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HLW-2A-Rwn"/>
+                            <constraint firstItem="YxB-cd-YWS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60.5" id="MXo-1C-9gk"/>
+                            <constraint firstItem="Gdc-MH-LDy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VQQ-zq-1Gj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YxB-cd-YWS" secondAttribute="trailing" constant="60.5" id="dQk-4I-dwK"/>
+                            <constraint firstItem="UKp-l4-9cJ" firstAttribute="top" secondItem="Gdc-MH-LDy" secondAttribute="bottom" constant="20" id="eje-fm-5yS"/>
+                            <constraint firstItem="SPT-gU-wAQ" firstAttribute="top" secondItem="UKp-l4-9cJ" secondAttribute="bottom" constant="42" id="ezh-Tg-EBV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YxB-cd-YWS" secondAttribute="bottom" constant="50" id="hKW-bc-vZ2"/>
+                            <constraint firstItem="Gdc-MH-LDy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="tvq-M9-PL2"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="hostname" destination="DJG-Rc-Ex5" id="tjQ-Jc-HmA"/>
+                        <outlet property="passButton" destination="fDP-pu-DCa" id="Tla-ON-ds4"/>
                         <outlet property="password" destination="bEv-WH-aLd" id="RMb-HA-PIL"/>
+                        <outlet property="settingsOffset" destination="hKW-bc-vZ2" id="eb5-yE-XDo"/>
                         <outlet property="username" destination="nMu-MM-cmE" id="GGh-Nx-ydH"/>
                     </connections>
                 </viewController>
@@ -74,4 +165,8 @@
             <point key="canvasLocation" x="36" y="36.945812807881772"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="61" height="61"/>
+        <image name="onepassword-button" width="27" height="27"/>
+    </resources>
 </document>

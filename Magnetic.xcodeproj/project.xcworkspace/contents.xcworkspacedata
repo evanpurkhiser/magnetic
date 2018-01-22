@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Magnetic.xcodeproj">
+      location = "group:../test.m">
+   </FileRef>
+   <FileRef
+      location = "group:../Magnetic/OnePassword/OnePasswordExtension.h">
+   </FileRef>
+   <FileRef
+      location = "group:../Magnetic/OnePassword/OnePasswordExtension.m">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/evan/Desktop/untitled folder/Magnetic/Magnetic/OnePassword">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
