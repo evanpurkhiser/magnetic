@@ -110,7 +110,6 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="fDP-pu-DCa" secondAttribute="height" multiplier="1:1" id="l2b-lS-4S4"/>
                                         </constraints>
-                                        <state key="normal" image="onepassword-button"/>
                                         <connections>
                                             <action selector="passwordAutofill:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="nTu-D8-jFc"/>
                                         </connections>
@@ -167,6 +166,5 @@
     </scenes>
     <resources>
         <image name="Logo" width="61" height="61"/>
-        <image name="onepassword-button" width="27" height="27"/>
     </resources>
 </document>

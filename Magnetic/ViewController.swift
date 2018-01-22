@@ -68,6 +68,11 @@ class ViewController: UIViewController {
         self.passButton.imageEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
         self.password.padding = UIEdgeInsetsMake(2, 10, 0, 10 + self.passButton.frame.width)
 
+        // TODO: Investigate why I have to do this
+        self.passButton.setImage(
+            UIImage.init(named: "onepassword-button", in: Bundle.init(for: OnePasswordExtension.self), compatibleWith: nil),
+            for: UIControlState.normal)
+
         self.view.addGestureRecognizer(UITapGestureRecognizer(
             target: self.view,
             action: #selector(self.view.endEditing)))
