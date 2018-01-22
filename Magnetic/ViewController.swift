@@ -103,7 +103,7 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(self.hostname.text, forKey: "hostname")
     }
 
-    @IBAction func updateSettings(_ sender: UITextField) {
+    @IBAction func updateSettings(_ sender: Any?) {
         let protectionSpace = getTransmissionProtectionSpace(host: self.hostname.text)
 
         let userCredential = URLCredential(
@@ -128,10 +128,9 @@ class ViewController: UIViewController {
         pw.findLogin(forURLString: urlString, for: self, sender: sender) { (loginDictionary, error) in
             guard let loginDictionary = loginDictionary else { return }
 
-            print(loginDictionary)
-
             self.username.text = loginDictionary[AppExtensionUsernameKey] as? String
             self.password.text = loginDictionary[AppExtensionPasswordKey] as? String
+            self.updateSettings(sender)
         }
     }
 
