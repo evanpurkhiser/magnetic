@@ -34,9 +34,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPT-gU-wAQ">
-                                <rect key="frame" x="60" y="269.66666666666669" width="254" height="28"/>
+                                <rect key="frame" x="62.333333333333329" y="269.66666666666669" width="249.33333333333337" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="254" id="avT-mn-UH0"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="254" id="avT-mn-UH0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Magnetic forwards magnet links and .torrent files to a transmission server of your choosing.">
