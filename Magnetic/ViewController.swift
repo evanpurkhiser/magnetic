@@ -135,6 +135,9 @@ class ViewController: UIViewController {
     }
 
     func torrentWasAdded(resp: TransmissionResponse) {
-        print(resp)
+        DispatchQueue.main.async {
+            let fb = UINotificationFeedbackGenerator()
+            fb.notificationOccurred(.success)
+        }
     }
 }
